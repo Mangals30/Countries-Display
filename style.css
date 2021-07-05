@@ -1,0 +1,70 @@
+body {
+  background: #fff;
+}
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url('./images/overlay.png') no-repeat center center/cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.country {
+  background: #f3f3f3;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:1200px) {
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width:1000px) {
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:600px) {
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:400px) {
+  .countries-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
